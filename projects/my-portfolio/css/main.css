@@ -1,0 +1,59 @@
+.main{
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+    
+}
+
+.main h1{
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+main h1::before{
+    content: url('../img/detalhe-noblue.svg');
+    width: 130px;
+    height: 100px;
+    top: -25px;
+    left: -40px;
+    position: absolute;
+    display: block;
+    z-index: -1;
+}
+
+.main p{
+    font-size: 1.5rem;
+    color: #525252;
+}
+
+@media (max-width: 1000px){
+    .main h1{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px){
+    .main{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+    .main h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+
+    .main img{
+        display: none;
+    }
+}
