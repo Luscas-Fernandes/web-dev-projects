@@ -48,12 +48,17 @@ a{
     color: #fff;
 }
 
+.motorista-div{
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+}
+
 .motorista{
     font-size: 28px;
     font-weight: bold;
     color: var(--lima);
-    margin-right: 28px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;   
 }
 
 .motorista::after{
@@ -136,8 +141,26 @@ a{
 .card-titles{
     font-family: "Unbounded", sans-serif;
     font-size: 28px;
-    margin: 20px 0;
+    margin: 15px 0;
+    padding: 5px 0;
     text-transform: uppercase;
+    position: relative;
+    transition: 0.4s;
+}
+
+.card-titles::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--roxo);
+    margin-top: 4px;
+    transition: .3s;
+}
+
+.cards-container:hover > .card-titles::after{
+    width: 100%;
 }
 
 .card-subtitle{
@@ -209,7 +232,24 @@ a{
 .grid-title{
     font-family: "Unbounded", sans-serif;
     font-size: 28px;
+    position: relative;
 }
+
+.grid-title::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--roxo);
+    margin-top: 4px;
+    transition: .3s;
+}
+
+.grid-cards:hover > .grid-title::after{
+    width: 100%;
+}
+
 
 .grid-paragraph{
     grid-column-start: 2;
@@ -312,6 +352,22 @@ a{
     font-family: "Unbounded", sans-serif;
     font-size: 28px;
     font-weight: 500;
+    position: relative;
+}
+
+.db-title::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background-color: var(--roxo);
+    margin-top: 4px;
+    transition: .3s;
+}
+
+.db-container:hover > .db-title::after{
+    width: 100%;
 }
 
 .db-subtitle{
